@@ -1,12 +1,14 @@
+//plus button
 document.getElementById('plus').addEventListener('click', ()=>{
     document.getElementById('joinCreate').classList.toggle('d-none');
 });
 
+//main page
 document.getElementById('create-class').addEventListener('click', () => {
     const allCards = document.getElementById('all-cards');
     const cardDiv = document.createElement('div');
     cardDiv.innerHTML = `
-    <div class="card m-3" style="width: 18rem;">
+    <div onclick="insideClass()" class="card m-3" style="width: 18rem;">
         <div>
             <div class="class-details">
                 <h4 id="className">${document.getElementById('classNameInput').value}</h4>
@@ -38,4 +40,9 @@ document.getElementById('create-class').addEventListener('click', () => {
     </div>
     `;
     offcanvasClasses.appendChild(offcanvasClassDiv);
-})
+});
+
+//inside class linking function
+const insideClass = () => {
+    window.location.href = 'inside-class.html';
+}

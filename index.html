@@ -37,8 +37,8 @@
                 </div>
             </div>
             <div id="joinCreate" class="join-create d-none">
-                <div data-bs-toggle="modal" data-bs-target="#exampleModal">Join Class</div>
-                <div data-bs-toggle="modal" data-bs-target="#exampleModal2">Create Class</div>
+                <div class="join-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Join Class</div>
+                <div class="create-btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">Create Class</div>
             </div>
         </div>
         <hr>
@@ -55,17 +55,27 @@
                 </div>
             </div>
             <hr>
-            <div class="offcanvas-body m-3">
-                <p>Enrolled</p>
-                <div id="offcanvasClasses"></div><hr>
+            <div>
+                <p class="m-3">Enrolled</p>
+                <div class="m-3" id="offcanvasClasses"></div>
+                <hr>
             </div>
-            <hr>
+            <div>
+                <div class="d-flex gap-3 activity p-3 pointer">
+                    <i class="fa-solid fa-boxes-packing fs-5 me-3"></i>
+                    <h5>Archived Classes</h5>
+                </div>
+                <div class="d-flex gap-3 activity p-3 pointer">
+                    <i class="fa-solid fa-gear fs-5 text me-3"></i>
+                    <h5>Settings</h5>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Cards -->
     <section id="all-cards" class="container-fluid">
-        <div class="card m-3" style="width: 18rem;">
+        <div onclick="insideClass()" id="insideClass" class="card m-3" style="width: 18rem;">
             <div>
                 <div class="class-details">
                     <h4>Class Name</h4>
@@ -86,8 +96,7 @@
 
 
     <!-- jon class modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -132,8 +141,7 @@
     </div>
 
     <!-- create class modal -->
-    <div class="modal fade" id="exampleModal2" tabindex="-1"
-        aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">

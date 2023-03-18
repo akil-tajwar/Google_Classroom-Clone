@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <!-- Navbar and Offcanvas -->
+    <section>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+            <div class="d-flex justify-content-left align-items-center">
+                <button class="btn btn-primary bg-white text-black border-0 fs-4 m-2" type="button"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                    aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-bars"></i></button>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img src="./media/googlelogo_clr_74x24px.svg" alt="">
+                    <h4>Classroom</h4>
+                </div>
+            </div>
+            <div class="d-flex justify-content-right align-items-center m-2 gap-4">
+                <div class="d-flex justify-content-right align-items-center pointer gap-1">
+                    <i class="fa-solid fa-ellipsis-vertical fs-3 text"></i>
+                    <i class="fa-solid fa-ellipsis-vertical fs-3 text"></i>
+                    <i class="fa-solid fa-ellipsis-vertical fs-3 text"></i>
+                </div>
+                <div>
+                    <img class="my-pic pointer" src="./media/akil.jpg" alt="">
+                </div>
+            </div>
+            <div id="joinCreate" class="join-create d-none">
+                <div class="join-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Join Class</div>
+                <div class="create-btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">Create Class</div>
+            </div>
+        </div>
+        <hr>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header flex-column">
+                <div class="d-flex gap-3 activity p-3 pointer">
+                    <i class="fa-solid fa-house fs-5 text me-3"></i>
+                    <h5>Classes</h5>
+                </div>
+                <div class="d-flex gap-3 activity p-3 pointer">
+                    <i class="fa-regular fa-calendar fs-5 text me-3"></i></i>
+                    <h5>Calendar</h5>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <p class="m-3">Enrolled</p>
+                <div class="m-3" id="offcanvasClasses"></div>
+                <hr>
+            </div>
+            <div>
+                <div class="d-flex gap-3 activity p-3 pointer">
+                    <i class="fa-solid fa-boxes-packing fs-5 me-3"></i>
+                    <h5>Archived Classes</h5>
+                </div>
+                <div class="d-flex gap-3 activity p-3 pointer">
+                    <i class="fa-solid fa-gear fs-5 text me-3"></i>
+                    <h5>Settings</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mb-3">
+        <div id="insideClassBg" class="container text-white"></div>
+        <div class="inside-class-grid mt-3">
+            <div class="work-field container">
+                <b>Upcoming</b>
+                <p>Wohoo, No work due soon!</p>
+                <p class="text-end">View all</p>
+            </div>
+            <div>
+                <div class="inside-class-post">
+                    <div>
+                        <img src="./media/akil.jpg" alt="">
+                    </div>
+                    <div class="inline-block">
+                        <input id="postWords" type="text" placeholder="Announce something to your class">
+                        <button onclick="postButton()">Post</button>
+                    </div>
+                </div>
+                <div id="post"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="inside-class.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d9f4599ff1.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

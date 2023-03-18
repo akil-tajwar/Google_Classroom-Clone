@@ -17,11 +17,11 @@
 }
 .join-create{
     position: absolute;
-    text-align: left;
+    left: 86%;
+    top: 50px;
     box-shadow: 1px 1px 9px;
     width: 130px;
     height: 68px;
-    margin: 4% 0 0 86%;
     z-index: +1;
     background-color: white;
 }
@@ -32,6 +32,7 @@
 .card{
     width: 310px !important;
     height: 310px !important;
+    cursor: pointer;
 }
 .card-body{
     position: relative;
@@ -48,7 +49,6 @@
 .class-details{
     background-image: url('./media/background2.jpg');
     background-size: cover;
-    background: cover;
     padding: 10px 20px;
     color: white;
     line-height: 7px;
@@ -58,10 +58,29 @@
     width: 50px;
     border-radius: 50%;
 }
-.modal-border{
+.modal-border, .work-field, .inside-class-post, .post-element{
     border: 1px lightslategray solid;
     padding: 20px;
     border-radius: 10px;
+}
+.post-element{
+    margin-top: 20px;
+}
+.inside-class-post input{
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+}
+.inside-class-post button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: blue;
+}
+.inside-class-post img, .post-element img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 .create-class input{
     width: 100%;
@@ -78,7 +97,19 @@
     text-align: center;
     color: white;
 }
-
+#insideClassBg{
+    background-image: url('./media/background2.jpg');
+    border-radius: 10px;
+    height: 230px;
+    width: 100%;
+}
+.inside-class-grid{
+    width: 69%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
 @media screen and (max-width: 576px) {
     #all-cards{
         grid-template-columns: repeat(1, 1fr);
