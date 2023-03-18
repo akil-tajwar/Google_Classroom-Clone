@@ -1,0 +1,88 @@
+.my-pic{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.activity{
+    width: 100%;
+}
+.pointer{
+    cursor: pointer;
+}
+.activity:hover, .join-create div:hover{
+    background-color: #e2e2e2;
+}
+.right-round:hover{
+    border-top-right-radius: 25px;
+}
+.join-create{
+    position: absolute;
+    text-align: left;
+    box-shadow: 1px 1px 9px;
+    width: 130px;
+    height: 68px;
+    margin: 4% 0 0 86%;
+    z-index: +1;
+    background-color: white;
+}
+.join-create div{
+    cursor: pointer;
+    padding: 5px 5px 5px 9px;
+}
+.card{
+    width: 310px !important;
+    height: 310px !important;
+}
+.card-body{
+    position: relative;
+    bottom: 90px;
+}
+.instructor{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    bottom: 40px;
+    right: 10px;
+}
+.class-details{
+    background-image: url('./media/background2.jpg');
+    background-size: cover;
+    background: cover;
+    padding: 10px 20px;
+    color: white;
+    line-height: 7px;
+}
+.join-pic{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.modal-border{
+    border: 1px lightslategray solid;
+    padding: 20px;
+    border-radius: 10px;
+}
+.create-class input{
+    width: 100%;
+}
+#all-cards{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.offcanvas-class{
+    background-color: #40d36c;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width: 576px) {
+    #all-cards{
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+        margin: auto;
+    }
+}
