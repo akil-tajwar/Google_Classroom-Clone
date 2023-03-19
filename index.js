@@ -3,7 +3,7 @@ document.getElementById('plus').addEventListener('click', ()=>{
     document.getElementById('joinCreate').classList.toggle('d-none');
 });
 
-//main page
+//main card body
 document.getElementById('create-class').addEventListener('click', () => {
     const allCards = document.getElementById('all-cards');
     const cardDiv = document.createElement('div');
@@ -28,11 +28,12 @@ document.getElementById('create-class').addEventListener('click', () => {
     `;
     allCards.appendChild(cardDiv);
 
+    //offcanvas
     const offcanvasClasses = document.getElementById('offcanvasClasses');
     const offcanvasClassDiv = document.createElement('div');
     offcanvasClassDiv.innerHTML = `
     <div class="d-flex gap-3">
-        <h2 class="offcanvas-class">A</h2>
+        <h2 class="offcanvas-class">${document.getElementById('classNameInput').value.slice(0,1)}</h2>
         <div>
             <div><h5>${document.getElementById('classNameInput').value}</h5></div>
             <div><p>${document.getElementById('sectionInput').value}</p></div>
